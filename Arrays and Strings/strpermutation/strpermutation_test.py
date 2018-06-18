@@ -19,7 +19,7 @@ for test_case in test_cases:
 #store the desired output in out which is a boolean variable as True  if the
 #in_out[2] reads "true"
 		out=True
-    if in_out[2] == 'false':
+	if in_out[2] == 'false':
 #store the desired output in out which is a boolean variable as False  if the
 #in_out[2] reads "false"
 		out=False
