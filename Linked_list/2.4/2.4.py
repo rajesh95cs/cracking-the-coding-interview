@@ -35,7 +35,7 @@ def rearrange_list(x,link_list):
 #equal_x and greater_than_x this is done by, we travers through the equal_x to
 #get the end next value and the head of the greater_than_x is replaced with the
 #end end next value of equal_x, and after that the end(next) value of smaller_than_x
-#is repalced with the head of the equal_x list hence the merging is done 
+#is repalced with the head of the equal_x list hence the merging is done
     smaller_head = smaller_than_x.head
     equal_tail = equal_x.head
     while equal_tail.next is not None:
@@ -51,7 +51,7 @@ def rearrange_list(x,link_list):
 if __name__ == '__main__':
     link_list = SinglyLinkedList()
     d = "dhlkbjstcrwomaxma12342353465463mpz"
-    for letter in d:
+    for letter in d:import sys
         link_list.insertNodeAtTail(letter)
     print(link_list.head.data)
     print "the current link list is"
