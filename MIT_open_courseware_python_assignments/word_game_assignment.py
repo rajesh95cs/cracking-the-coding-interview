@@ -222,6 +222,8 @@ def play_hand(hand, word_list):
     hand = deal_hand(n)
     display_hand(hand)
     input_word = raw_input("enter word")
+    if is is_valid_word(input_word,hand,)
+
 
 
 #
