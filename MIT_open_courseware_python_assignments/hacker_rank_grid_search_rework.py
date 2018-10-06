@@ -7,7 +7,7 @@ def gridSearch(g,p):
         str_p += ' '
     c = str_p.split()
     print "c ",c
-    str_g = ""
+    str_g =""
     for innerlist in g:
         for item in innerlist:
              str_g = str(str_g) + str(item)
@@ -21,26 +21,34 @@ def gridSearch(g,p):
 
         if c[0] in item1:
             hor_index = item1.find(c[0])
-            break
-        ver_index += 1
-    i = 0
-    flag = 0
-    for item2 in c:
-
-        if item2 == d[ver_index+i][hor_index:len(item2)+hor_index]:
-            print "item 2 ",item2
-            print "d[ver_index+i][hor_index:hor_index+len(item2)] ",d[ver_index+i][hor_index:hor_index+len(item2)]
-            flag = 1
-        else:
+            i = 0
             flag = 0
+            count = 0
+            for item2 in c:
 
-        i += 1
+                if item2 == d[ver_index+i][hor_index:len(item2)+hor_index]:
+                    print "item 2 ",item2
+                    print "d[ver_index+i][hor_index:hor_index+len(item2)] ",d[ver_index+i][hor_index:hor_index+len(item2)]
+                    count += 1
 
+                else:
+                    count = count
+                    break
+                print "count ",count
+                i += 1
+            if count == len(c):
+                flag = 1
+                return "yes"
+            else :
+                flag = 0
+        ver_index += 1
 
-    if flag == 1:
-        return "yes"
-    else :
+    if flag == 0:
         return "no"
+
+
+
+
 
 
 file = open('test.txt','r')

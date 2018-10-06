@@ -1,29 +1,59 @@
-import sys
-sys.path.append("../")
-from stack import *
+stack_size = 10
+stack_pointer = [-1,-1,-1]
+buffer = stack_size*3*[0]
+def three_stacks():
+
+    for i in range(4):
+        print "enter stack number"
+        stack_num = int(raw_input())
+        if stack_num < 3:
+            for j in range(4):
+                print "enter value"
+                value = int(raw_input())
+                push(stack_num,value)
+        else:
+            return "only 3 stacks allowed ie 0,1,2"
+    print buffer
+    for i in range(4):
+        print "enter stack number "
+        stack_num = int(raw_input())
+        if stack_num < 3:
+            print pop(stack_num)
+
+        else:
+            return "only 3 stacks allowed ie 0,1,2"
+    print buffer
+    print "enter stack number "
+    stack_num = int(raw_input())
+    print peek(stack_num)
+    
 
 
-def three_stacks(stack1,stack2,stack3):
-    combine_stacks = []
-    combine_stacks.append(stack1)
-    combine_stacks.append(stack2)
-    combine_stacks.append(stack3)
-    return combine_stacks
+def push(stack_num,value):
+    if stack_pointer[stack_num]+1 >= stack_size:
+        return "stack is full"
+    else:
+        stack_pointer[stack_num] += 1
+        buffer[top_of_stack(stack_num)] = value
+def pop(stack_num):
+    if is_empty(stack_num):
+        return "stack is empty"
+    else:
+        temp = buffer[top_of_stack(stack_num)]
+        buffer[top_of_stack(stack_num)] = 0
+        stack_pointer[stack_num]-=1
+        return temp
 
-if __name__ == '__main__':
-    stack1 = Stack()
-    stack2 = Stack()
-    stack3 = Stack()
-    stack1.push(4)
-    stack2.push(5)
-    stack3.push(6)
-    stack1.push(3)
-    stack2.push(4)
-    stack3.push(2)
-    stack1.push(4)
-    stack2.push(3)
-    stack3.push(5)
-    stack1.push(3)
-    stack2.push(6)
-    stack3.push(8)
-    print(three_stacks(stack1,stack2,stack3))
+def peek(stack_num):
+    if is_empty(stack_num):
+        return "stack is empty"
+    return buffer[top_of_stack(stack_num)]
+
+
+def top_of_stack(stack_num):
+    return stack_size*stack_num + stack_pointer[stack_num]
+
+def is_empty(stack_num):
+    return stack_pointer[stack_num] == -1
+
+three_stacks()

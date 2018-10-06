@@ -1,0 +1,138 @@
+\documentclass[a4paper,10pt]{article}
+%-----------------------------------------------------------
+\usepackage[top=0.75in, bottom=0.75in, left=0.55in, right=0.85in]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{palatino}
+\usepackage{tabularx}
+\fontfamily{SansSerif}
+\selectfont
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage[T1]{fontenc}
+\usepackage
+%[ansinew]
+[utf8]
+{inputenc}
+
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.75}
+\textheight=9.75in
+\raggedbottom
+
+\setlength{\tabcolsep}{0in}
+\newcommand{\isep}{-2 pt}
+\newcommand{\lsep}{-0.5cm}
+\newcommand{\psep}{-0.6cm}
+\renewcommand{\labelitemii}{$\circ$}
+
+\pagestyle{empty}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\small \colorbox{mygrey}{\begin{minipage}{0.975\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[3]{
+\begin{tabular*}{6.62in}{l @{\extracolsep{\fill}} r}
+	\textsc{{\textbf{#1}}} & \textsc{\textit{[#2]}} \\
+\end{tabular*}\vspace{-8pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+\hspace{0.5cm}\\[-0.2cm]
+
+\textbf{Rajesh R Nair} \\
+\indent Sreenilayam, Aiswarya Nagar \\
+\indent Choorakad, Tripunitura  \\
+\indent Ernakulam (Kerala, INDIA) - 682301\\
+\indent Email-id : \textbf{rajeshrnair95@email.com} \\
+\indent Mobile No.: \textbf{9567036530} \\
+\indent Alt Home No.: \textbf{0484-2785751} \\
+
+\resheading{\textbf{ACADEMIC DETAILS} }\\[\lsep]
+\\ \\
+%\begin{table}[ht!]
+%\begin{center}
+\indent \begin{tabular}{ l @{\hskip 0.15in} l @{\hskip 0.15in} l @{\hskip 0.15in} l @{\hskip 0.15in} l }
+\hline
+\textbf{Examination} & \textbf{University or Board} & \textbf{Institute} & \textbf{Year} & \textbf{\%} \\
+\hline
+UnderGraduate Specialization: & \textit{Computer Engineering} \\
+Graduation & M G University, Kottayam & SCMS, Angamaly & 2018-passout & 65\\
+
+\hline
+10th & CBSE & Chinmaya Vidyalaya,Tripunitura & 2010-2011 & 80\\
+\hline
+12th & CBSE & Chinmaya Vidyalaya,Tripunitura & 2011-2013 &
+75\\
+\end{tabular}
+%\end{center}
+%\end{table}
+\\ \\
+
+\resheading{\textbf{FIELDS OF INTEREST} }\\[\lsep]
+\begin{itemize}
+\item \noindent Software Development, Frontend WEB development .
+\end{itemize}
+
+\resheading{\textbf{TECHNICAL SKILLS} }\\[\lsep]
+\begin{itemize}
+\item \noindent  \textbf{Languages} : Python, C, C++
+\item  \textbf{WEB} : HTML, CSS
+\item  \textbf{Tools} : Git , \LaTeX 
+\item \textbf{Database} : MySQL
+\item  \textbf{OS} : Linux, Windows
+\end{itemize}
+
+\resheading{\textbf{PROJECTS } }\\[\lsep]
+\begin{itemize}
+\item \textbf{VOICE COMMAND BROWSING(Extension for Google Chrome Browser)(demo version)
+} 
+	\begin{itemize}\itemsep \isep
+	\item Objective :Interfacing browsing and browser related fuctionalities with voice commands in   Google Chrome .
+    \item Project Duration : (Feb 2017 - April 2017)
+	\item Extension was developed using html, css and javascript for Google Chrome browser
+
+	\item Source code :\url{https://github.com/rajesh95cs/voice-command-browsing.git}
+    \end{itemize} 
+\item \textbf{A WORD GAME}
+\begin{itemize}\itemsep \isep
+    
+    \item Objective : To develop a simple word game using Python
+    \item Project Duration: (April 2016 - July 2016)
+    
+    \item Game Rules :  \begin{itemize}
+    \item A player is dealt a hand of n letters chosen at random .  \item The player arranges the hand into a set of words using each letter at most once. \item The score for the hand is the sum of the score for the words. \item The score for a word is the sum of the points for letters in the word. 
+    \item This is actually an assignment which was posted at MIT opencourse ware website.
+    \end{itemize}
+    
+                 
+
+
+    \item Source code :\url{https://github.com/rajesh95cs/wordgame.git} 
+	\end{itemize}
+    
+   
+
+
+
+\end{itemize}
+
+\resheading{\textbf{STRENGTHS} }\\[\lsep]
+\begin{itemize}
+\item \noindent Positive Attitude, Social Interaction, Ability to learn new skills, Hardworking, Patience.
+\end{itemize}
+
+\resheading{\textbf{HOBBIES} }\\[\lsep]
+\begin{itemize}
+\item \noindent Body workout,Solving algorithmic problems in Hackerrank website(current rank 60089).
+\end{itemize}
+
+\end{document}
+
